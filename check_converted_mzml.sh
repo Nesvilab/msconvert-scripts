@@ -35,8 +35,16 @@ for dir in "$root"/*/; do
     
     num_files=$(find "$dir" -type f -name "*.mzML" | wc -l)
     echo "Number of mzML files in $dir: $num_files"
-  else
-    echo "Directory $dir not found"
+  fi
+done
+
+for dir in "$root"; do
+  if [ -d "$dir" ]; then
+    num_files=$(find "$dir" -type f -name "*.raw" | wc -l)
+    echo "Number of raw  files in $dir: $num_files"
+    
+    num_files=$(find "$dir" -type f -name "*.mzML" | wc -l)
+    echo "Number of mzML files in $dir: $num_files"
   fi
 done
 
