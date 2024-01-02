@@ -10,4 +10,5 @@ docker exec -it <container names> bash
 
 ## shell scripts
 - `run_msconvert.sh`: convert raw files to mzML files. Run in the docker container
+- `run_msconvert_parallel.sh`: convert raw files to mzML files in parallel. Adjust the `threads` as needed. Run in the docker container
 - `check_converted_mzml.sh`: check the completeness and correctness of the converted mzML files. Does not need docker.
