@@ -28,6 +28,7 @@ find ./ -name '*.raw' | parallel -j $threads '
   log_file={/.}.log
   if [ ! -f $f2 ];
   then
-    wine msconvert --64 --zlib --filter "peakPicking" --filter "zeroSamples removeExtra 1-" {} >$log_file 2>&1
+    outdir=$(dirname {})
+    wine msconvert --64 --zlib --filter "peakPicking" --filter "zeroSamples removeExtra 1-" --outdir $outdir {} >$log_file 2>&1
   fi
 '

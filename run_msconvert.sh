@@ -26,6 +26,7 @@ do
   f2=${f/.raw/.mzML}
   if [ ! -f $f2 ];
   then
-    wine msconvert --64 --zlib --filter "peakPicking" --filter "zeroSamples removeExtra 1-" $f
+    outdir=$(dirname "$f2")
+    wine msconvert --64 --zlib --filter "peakPicking" --filter "zeroSamples removeExtra 1-" --outdir $outdir $f
   fi
 done
