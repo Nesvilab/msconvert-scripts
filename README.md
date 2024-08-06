@@ -1,5 +1,5 @@
 # msconvert-scripts
-Some shell scripts related to raw format conversion using msconvert
+Some shell scripts related to Thermo Fisher raw format conversion using msconvert
 
 ## docker scripts
 ```shell
