@@ -3,9 +3,11 @@ Some shell scripts related to Thermo Fisher raw format conversion using msconver
 
 ## docker scripts
 ```shell
-docker pull chambm/pwiz-skyline-i-agree-to-the-vendor-licenses
-docker run -itd -v <local directory>:<container directory> <image ID> /bin/bash
-docker exec -it <container names> bash
+> docker build -t Nesvilab/msconvert-scripts .
+> docker run -itd -v <local directory (your data directory)>:/data/ Nesvilab/msconvert-scripts /bin/bash
+container_id will appear here
+
+> docker exec -it <container id> bash
 ```
 
 ## shell scripts
