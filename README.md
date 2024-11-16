@@ -10,6 +10,8 @@ container_id will appear here
 > docker exec -it <container id> bash
 ```
 
+The script in this repo will be in `/` and your will be in the `/data` directory when you enter the container.
+
 ## shell scripts
 - `run_msconvert.sh`: convert raw files to mzML files. Run in the docker container
 - `run_msconvert_parallel.sh`: convert raw files to mzML files in parallel. Adjust the `threads` as needed. Run in the docker container
