@@ -6,6 +6,7 @@ Some shell scripts related to Thermo Fisher raw format conversion using msconver
 docker pull chambm/pwiz-skyline-i-agree-to-the-vendor-licenses
 docker run -itd -v <local directory>:<container directory> <image ID> /bin/bash
 docker exec -it <container names> bash
+git clone https://github.com/Nesvilab/msconvert-scripts.git
 ```
 
 ## shell scripts
